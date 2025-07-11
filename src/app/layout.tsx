@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Ubuntu_Sans } from "next/font/google";
 import "./globals.css";
+import PageWrapper from "./components/PageWrapper";
+
 
 const ubuntuSans = Ubuntu_Sans({
   variable: "--font-ubuntu-sans",
-  subsets: ["greek"],
-  weight: "100",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${ubuntuSans.variable} antialiased`}>
-        
+        <PageWrapper>{children}</PageWrapper>
       </body>
     </html>
   );
