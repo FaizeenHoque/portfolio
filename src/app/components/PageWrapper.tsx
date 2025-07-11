@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 
 type PageWrapperProps = {
   children: ReactNode;
@@ -11,7 +11,7 @@ function lerp(start: number, end: number, amt: number) {
 }
 
 export default function PageWrapper({ children }: PageWrapperProps) {
-  const [offset, setOffset] = useState({ x: 0, y: 0 });
+  const wrapperRef = useRef<HTMLDivElement>(null);
   const target = useRef({ x: 0, y: 0 });
   const current = useRef({ x: 0, y: 0 });
 
@@ -26,11 +26,13 @@ export default function PageWrapper({ children }: PageWrapperProps) {
     let animationFrameId: number;
 
     const animate = () => {
-      // interpolate current towards target for smoothness
       current.current.x = lerp(current.current.x, target.current.x, 0.1);
       current.current.y = lerp(current.current.y, target.current.y, 0.1);
 
-      setOffset({ x: current.current.x, y: current.current.y });
+      if (wrapperRef.current) {
+        // Important: don't interfere with layout by only changing background position
+        wrapperRef.current.style.backgroundPosition = `${40 + current.current.x}px ${40 + current.current.y}px`;
+      }
 
       animationFrameId = requestAnimationFrame(animate);
     };
@@ -45,9 +47,11 @@ export default function PageWrapper({ children }: PageWrapperProps) {
 
   return (
     <div
+      ref={wrapperRef}
       className="min-h-screen bg-grid-pattern"
       style={{
-        backgroundPosition: `${40 + offset.x}px ${40 + offset.y}px`,
+        // Only set background position, no fixed heights or overflows here
+        backgroundPosition: `40px 40px`,
       }}
     >
       {children}

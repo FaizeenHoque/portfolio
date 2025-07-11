@@ -1,13 +1,13 @@
-import Image from "next/image";
 import { Navbar } from "./components/Navbar";
-import PageWrapper from "./components/PageWrapper";
+import Hero from "./components/Hero";
+import About from "./components/About";
 
 export default function Home() {
   return (
-    <div>
-      <main>
-        <Navbar/>
-      </main>
-    </div>  
+    <>
+      <Navbar />
+      <Hero />
+      <About />
+    </>
   );
 }

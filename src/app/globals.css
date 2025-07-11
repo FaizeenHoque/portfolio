@@ -13,6 +13,13 @@ body {
   font-family: var(--font-ubuntu-sans), sans-serif;
 }
 
+html, body {
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 .bg-grid-pattern {
   background-color: #f9fafb;
   background-image:
@@ -21,3 +28,4 @@ body {
   background-size: 40px 40px;
   transition: background-position 0.1s ease-out;
 }
+
