@@ -1,15 +1,17 @@
-declare module '@emailjs/browser' {
+declare module "@emailjs/browser" {
   export function send(
     serviceID: string,
     templateID: string,
-    templateParams?: Record<string, any>,
-    userID?: string
-  ): Promise<any>;
+    templateParams: Record<string, string>,
+    publicKey: string
+  ): Promise<{ status: number; text: string }>;
 
   export function sendForm(
     serviceID: string,
     templateID: string,
     form: HTMLFormElement,
-    userID?: string
-  ): Promise<any>;
+    publicKey: string
+  ): Promise<{ status: number; text: string }>;
+
+  export function init(publicKey: string): void;
 }
