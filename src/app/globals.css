@@ -18,6 +18,14 @@ html, body {
   min-height: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  overflow-y: scroll; /* or auto */
+}
+
+/* For Chrome, Safari, and Opera */
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .bg-grid-pattern {

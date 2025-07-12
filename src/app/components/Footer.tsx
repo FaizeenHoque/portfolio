@@ -59,12 +59,6 @@ export default function Footer() {
           </em>{" "}
           — <span className="text-gray-500">Qur’an 16:128</span>
         </p>
-        <p>
-          <em>
-            “With God all things are possible.”
-          </em>{" "}
-          — <span className="text-gray-500">Matthew 19:26</span>
-        </p>
       </div>
     </footer>
   );
