@@ -11,7 +11,29 @@ const ubuntuSans = Ubuntu_Sans({
 
 export const metadata: Metadata = {
   title: "Faizeen Hoque || Portfolio",
-  description: "a javascript wizardry",
+  description: "A full-stack developer and AI enthusiast building the future.",
+  openGraph: {
+    title: "Faizeen Hoque || Portfolio",
+    description: "A full-stack developer and AI enthusiast building the future.",
+    url: "https://faizeenhoque.xyz",
+    siteName: "Faizeen Hoque",
+    images: [
+      {
+        url: "https://faizeenhoque.xyz/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Faizeen Hoque Portfolio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Faizeen Hoque || Portfolio",
+    description: "A full-stack developer and AI enthusiast building the future.",
+    images: ["https://faizeenhoque.xyz/og-image.png"],
+  },
 };
 
 export default function RootLayout({

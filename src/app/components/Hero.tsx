@@ -5,7 +5,7 @@ import { ChevronDown } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center text-center h-[85vh] px-4 overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center text-center h-[100vh] px-4 overflow-hidden">
       <div>
         <h1 className="text-5xl md:text-7xl font-extrabold bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-2">
           Faizeen Hoque
