@@ -3,7 +3,6 @@ import { Ubuntu_Sans } from "next/font/google";
 import "./globals.css";
 import PageWrapper from "./components/PageWrapper";
 
-
 const ubuntuSans = Ubuntu_Sans({
   variable: "--font-ubuntu-sans",
   subsets: ["latin"],
@@ -12,6 +11,9 @@ const ubuntuSans = Ubuntu_Sans({
 export const metadata: Metadata = {
   title: "Faizeen Hoque || Portfolio",
   description: "A full-stack developer and AI enthusiast building the future.",
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     title: "Faizeen Hoque || Portfolio",
     description: "A full-stack developer and AI enthusiast building the future.",
@@ -43,6 +45,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* Manually add favicon in case metadata fails */}
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className={`${ubuntuSans.variable} antialiased`}>
         <PageWrapper>{children}</PageWrapper>
       </body>
