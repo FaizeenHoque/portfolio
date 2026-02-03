@@ -3,9 +3,43 @@
 :root {
   --lightmode-primary: #f1eee4;
   --lightmode-secondary: #e8e4d9;
-  --background: var(--lightmode-primary);
 }
 
-body {
-  background: var(--lightmode-primary);
+html {
+  scroll-behavior: smooth;
+}
+
+/* Falling leaf animation */
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg) translateX(0px);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(25vh) rotate(45deg) translateX(20px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(50vh) rotate(90deg) translateX(-20px);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(75vh) rotate(135deg) translateX(20px);
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(180deg) translateX(-10px);
+    opacity: 0;
+  }
+}
+
+.animate-fall {
+  animation: fall linear infinite;
+  will-change: transform, opacity;
 }
