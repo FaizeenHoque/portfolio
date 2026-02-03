@@ -7,7 +7,7 @@
       "type": "hardware",
       "description": "A open source, customizeable developement board. that runs on the RP2040 microprocessor.",
       "tags": ["KiCad", "PCB", "Microcontroller"],
-      "github": "https://github.com/Hyprboard"
+      "github": "https://github.com/FaizeenHoque/Hyprboard"
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "type": "software",
       "description": "sable is a lightweight Unix-style shell written in C. It supports executing external commands, basic built-ins (cd, exit), and displays a colorized prompt showing your username and current working directory.",
       "tags": ["C", "CLI", "Unix"],
-      "github": "https://github.com/Sable"
+      "github": "https://github.com/FaizeenHoque/Sable"
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "type": "software",
       "description": "A Quran App built using Kotlin.",
       "tags": ["Kotlin", "Android", "Quran"],
-      "github": "https://github.com/Verses"
+      "github": "https://github.com/FaizeenHoque/Verses"
     }
   ]
 }
