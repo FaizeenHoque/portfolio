@@ -8,8 +8,8 @@ const pixelifySans = Pixelify_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Faizeen Haque's Portfolio Website",
+  title: "Faizeen Hoque - Portfolio",
+  description: "Faizeen Hoque's Portfolio Website",
 };
 
 export default function RootLayout({
