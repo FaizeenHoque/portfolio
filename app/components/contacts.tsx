@@ -16,7 +16,7 @@ const Contacts = () => {
     {
       name: "YouTube",
       image: "/24.png",
-      href: "https://youtube.com/@thelinuxpenguin",
+      href: "https://youtube.com/@faizeenmakes",
     },
   ];
 
