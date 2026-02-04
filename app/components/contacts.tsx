@@ -23,7 +23,7 @@ const Contacts = () => {
   return (
     <section
       id="contact"
-      className="w-full bg-[var(--lightmode-primary)] py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8"
+      className="w-full bg-[var(--lightmode-secondary)] py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8"
     >
       <div className="max-w-4xl mx-auto">
         {/* Header Image */}
