@@ -6,7 +6,7 @@ const Contacts = () => {
     {
       name: "Email",
       image: "/23.png",
-      href: "mailto:me@faizeenhoque.xyz",
+      href: "mailto:haquefaizeen11@gmail.com",
     },
     {
       name: "GitHub",
